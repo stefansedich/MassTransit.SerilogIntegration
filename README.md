@@ -1,8 +1,11 @@
-MassTransit.SerilogIntegration - Serilog Integration for Mass Transit
-==============================
+MassTransit.SerilogIntegration
+=====
+Serilog Integration for Mass Transit
+-----
 
-[Mass Transit](http://masstransit-project.com/ "Mass Transit")
-[Serilog](http://serilog.net/ "Serilog")
+### [Mass Transit Project](http://masstransit-project.com/ "Mass Transit")
+
+### [Serilog Project](http://serilog.net/ "Serilog")
 
 ### Usage
 
