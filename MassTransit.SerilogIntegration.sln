@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{828156
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{EB01A399-9CE3-4F63-8945-CC64ACCB2855}"
 	ProjectSection(SolutionItems) = preProject
+		src\MassTransit.SerilogIntegration.nuspec = src\MassTransit.SerilogIntegration.nuspec
 		README.md = README.md
 	EndProjectSection
 EndProject
