@@ -38,8 +38,7 @@ namespace MassTransit.SeriLogIntegration
 
         #region Constructors and Destructors
 
-        /// <summary> Create a new NLog logger instance. </summary>
-        /// <param name="name"> Name of type to log as. </param>
+        /// <summary> Create a new SerilogLog logger instance. </summary>
         public SerilogLog(ILogger logger)
         {
             if (logger == null)
