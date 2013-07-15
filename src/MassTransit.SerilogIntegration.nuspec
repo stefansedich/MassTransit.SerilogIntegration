@@ -1,18 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>MassTransit.SerilogIntegration</id>
-        <version>2013.07.15</version>
-        <authors>CaptiveAire Systems</authors>
-        <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-        <projectUrl>https://github.com/CaptiveAire/MassTransit.SerilogIntegration</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>No-nonsense logging library for the NoSQL era meets Distributed Application Framework for .NET.</description>
-        <language>en-US</language>
-        <tags>serilog masstransit logging integration</tags>
-    </metadata>
-    <files>
-        <file src="bin\Release\MassTransit.SeriLogIntegration.dll" target="lib\net45" />
-        <file src="bin\Release\MassTransit.SeriLogIntegration.pdb" target="lib\net45" />
-    </files>
+  <metadata>
+    <id>MassTransit.SerilogIntegration</id>
+    <version>2013.07.15.2</version>
+    <authors>CaptiveAire Systems</authors>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/CaptiveAire/MassTransit.SerilogIntegration</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>No-nonsense logging library for the NoSQL era meets Distributed Application Framework for .NET.</description>
+    <language>en-US</language>
+    <tags>serilog masstransit logging integration</tags>
+    <dependencies>
+      <dependency id="MassTransit" version="2.7.4" />
+      <dependency id="Serilog" version="0.8.3" />
+      <dependency id="Magnum" version="2.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\MassTransit.SeriLogIntegration.dll" target="lib\net45" />
+    <file src="bin\Release\MassTransit.SeriLogIntegration.pdb" target="lib\net45" />
+  </files>
 </package>
