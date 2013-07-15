@@ -12,18 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace MassTransit.SeriLogIntegration
+namespace MassTransit
 {
     using MassTransit.BusConfigurators;
+    using MassTransit.SeriLogIntegration;
 
-    /// <summary>
-    /// Serilog configurator extensions.
-    /// </summary>
+    using Serilog;
+
+    /// <summary> Serilog configurator extensions. </summary>
     public static class SerilogConfiguratorExtensions
     {
         #region Public Methods and Operators
 
-        public static void UseSerilog(this ServiceBusConfigurator configurator, Serilog.ILogger baseLogger)
+        /// <summary> Configure the Mass Transit Service Bus to use the provided Serilog. </summary>
+        /// <param name="configurator"> The configurator to act on. </param>
+        /// <param name="baseLogger"> The base logger. </param>
+        public static void UseSerilog(this ServiceBusConfigurator configurator, ILogger baseLogger)
         {
             SerilogLogger.Use(baseLogger);
         }
