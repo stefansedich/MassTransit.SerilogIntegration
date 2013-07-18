@@ -14,6 +14,8 @@
 
 namespace MassTransit
 {
+    using System;
+
     using MassTransit.BusConfigurators;
     using MassTransit.SeriLogIntegration;
 
@@ -26,10 +28,15 @@ namespace MassTransit
 
         /// <summary> Configure the Mass Transit Service Bus to use the provided Serilog. </summary>
         /// <param name="configurator"> The configurator to act on. </param>
-        /// <param name="baseLogger"> The base logger. </param>
-        public static void UseSerilog(this ServiceBusConfigurator configurator, ILogger baseLogger)
+        /// <param name="baseLogger"> (Optional) The base logger. If none supplied, will use the global logger. </param>
+        public static void UseSerilog(this ServiceBusConfigurator configurator, ILogger baseLogger = null)
         {
-            SerilogLogger.Use(baseLogger);
+            if (configurator == null)
+            {
+                throw new ArgumentNullException("configurator");
+            }
+
+            SerilogLogger.Use(baseLogger ?? Log.Logger);
         }
 
         #endregion
