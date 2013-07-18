@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MassTransit.SerilogIntegration</id>
-    <version>2013.07.15.2</version>
+    <version>2013.07.18</version>
     <authors>CaptiveAire Systems</authors>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/CaptiveAire/MassTransit.SerilogIntegration</projectUrl>
