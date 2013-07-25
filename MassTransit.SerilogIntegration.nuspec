@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MassTransit.SerilogIntegration</id>
-    <version>2013.07.18</version>
+    <version>1.0.0</version>
     <authors>CaptiveAire Systems</authors>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/CaptiveAire/MassTransit.SerilogIntegration</projectUrl>
@@ -17,7 +17,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\MassTransit.SeriLogIntegration.dll" target="lib\net45" />
-    <file src="bin\Release\MassTransit.SeriLogIntegration.pdb" target="lib\net45" />
+    <file src="src\bin\Release\MassTransit.SeriLogIntegration.dll" target="lib\net45" />
+    <file src="src\bin\Release\MassTransit.SeriLogIntegration.pdb" target="lib\net45" />
   </files>
 </package>
