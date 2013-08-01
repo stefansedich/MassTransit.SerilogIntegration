@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MassTransit.SerilogIntegration</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>CaptiveAire Systems</authors>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/CaptiveAire/MassTransit.SerilogIntegration</projectUrl>
@@ -11,8 +11,8 @@
     <language>en-US</language>
     <tags>serilog masstransit logging integration</tags>
     <dependencies>
-      <dependency id="MassTransit" version="2.7.4" />
-      <dependency id="Serilog" version="0.8.3" />
+      <dependency id="MassTransit" version="2.8.0" />
+      <dependency id="Serilog" version="0.8.5" />
       <dependency id="Magnum" version="2.1.0" />
     </dependencies>
   </metadata>
