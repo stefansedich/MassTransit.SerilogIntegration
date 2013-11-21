@@ -12,20 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using MassTransit.BusConfigurators;
+using MassTransit.SeriLogIntegration;
+using Serilog;
+
 namespace MassTransit
 {
-    using System;
-
-    using MassTransit.BusConfigurators;
-    using MassTransit.SeriLogIntegration;
-
-    using Serilog;
-
-    /// <summary> Serilog configurator extensions. </summary>
     public static class SerilogConfiguratorExtensions
     {
-        #region Public Methods and Operators
-
         /// <summary> Configure the Mass Transit Service Bus to use the provided Serilog. </summary>
         /// <param name="configurator"> The configurator to act on. </param>
         /// <param name="baseLogger"> (Optional) The base logger. If none supplied, will use the global logger. </param>
@@ -36,9 +31,7 @@ namespace MassTransit
                 throw new ArgumentNullException("configurator");
             }
 
-            SerilogLogger.Use(baseLogger ?? Log.Logger);
+            SerilogLogger.Use(baseLogger);
         }
-
-        #endregion
     }
 }

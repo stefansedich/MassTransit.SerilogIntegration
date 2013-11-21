@@ -12,46 +12,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Runtime.Caching;
+using MassTransit.Logging;
+using Serilog;
+using ILogger = MassTransit.Logging.ILogger;
+
 namespace MassTransit.SeriLogIntegration
 {
-    using System.Runtime.Caching;
-
-    using MassTransit.Logging;
-
     public class SerilogLogger : ILogger
     {
-        #region Fields
-
         private readonly Serilog.ILogger _baseLogger;
-
         private readonly MemoryCache _logs;
-
-        #endregion
-
-        #region Constructors and Destructors
 
         public SerilogLogger(Serilog.ILogger baseLogger)
         {
-            this._baseLogger = baseLogger;
-            this._logs = new MemoryCache("MassTransit.SerilogIntegration");
+            _baseLogger = baseLogger;
+            _logs = new MemoryCache("MassTransit.SerilogIntegration");
         }
 
-        #endregion
+        public ILog Get(string name)
+        {
+            var logger = _baseLogger ?? Log.Logger;
+            var log = (_logs[name] as ILog)
+                      ?? (ILog)(_logs[name] = new SerilogLog(logger.ForContext("name", name)));
 
-        #region Public Methods and Operators
+            return log;
+        }
 
         public static void Use(Serilog.ILogger baseLogger)
         {
             Logger.UseLogger(new SerilogLogger(baseLogger));
         }
-
-        public ILog Get(string name)
-        {
-            ILog log = (this._logs[name] as ILog) ?? (ILog)(this._logs[name] = new SerilogLog(this._baseLogger.ForContext("name", name)));
-
-            return log;
-        }
-
-        #endregion
     }
 }
